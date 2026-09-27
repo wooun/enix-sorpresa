@@ -1,0 +1,248 @@
+h1 {
+    color: #f7eff3;
+    font-size: 27px;
+}
+.cat {
+    color: #D9BA6C;
+    font-size: 19px;
+    line-height: 1.2;
+}
+body {
+    text-align: center;
+    background-color: #223240;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+p {
+    color: #d0affb;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 13px;
+}
+h2 {
+    color: #f3efeed8;
+}
+#enix {
+    color: #321103d8;
+}
+h3 {
+    color: #ffffffd8;
+}
+.love {
+    margin-left: 94px;
+}
+button {
+    background-color: #14202a;
+    color: #fec1ee;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+.ear {
+    font-size: 15px;
+}
+#surprise {
+    opacity: 0;
+    transition: opacity 1s;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+#continueButton {
+    display: none;
+}
+#secondScene {
+    display: none;
+}
+#kawaiiMessage {
+    transition: opacity 1s;
+    opacity: 0;
+}
+#kawaiiMessage p {
+    color: #74aaa8;
+}
+#yupiMessage {
+    display: none;
+    position: relative;
+    height: 300px;
+}
+.heart {
+    position: absolute;
+    font-size: 30px;
+    color: #99030C;
+    opacity: 0;
+    animation: floatHeart 2.5s ease-in-out infinite alternate;
+    transition: left 6s ease, top 6s ease, opacity 2s ease; 
+}
+@keyframes floatHeart {
+    from {
+        margin-top: 0;
+    }
+
+    to {
+        margin-top: -5px;
+    }
+}
+#enixName {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 42px;
+    font-weight: bold;
+    color: #f7eff3;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 1s ease;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+#tristeMessage {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+    max-width: 650px;
+    margin: 30px auto;
+    line-height: 1.6;
+}
+#tristeMessage p {
+    margin-bottom: 20px;
+    color: #74aaa8;
+}
+#tristeMessage strong {
+    font-size: 24px;
+    color: #f5f2f3
+}
+#finalScene {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+#yesButton {
+    transition: font-size 0.3s ease;
+}
+#dateInput {
+    display: none;
+}
+#dateLabel {
+    display: none;
+}
+#finalMessage {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+body {
+    min-height: 100vh;
+}
+#firstScene, 
+#secondScene,
+#finalScene {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+#firstScene {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#firstScene button {
+    animation: softFloat 3s ease-in-out infinite;
+}
+#secondScene {
+    padding: 40px 20px;
+}
+#secondScene > h2,
+#secondScene > p {
+    text-align: center;
+}
+#secondScene > button {
+    margin: 8px;
+    animation: softFloat 3s ease-in-out infinite;
+}
+#kawaiiButton {
+    animation-delay: 0s;
+}
+#yupiButton {
+    animation-delay: 0.4s;
+}
+#tristeButton {
+    animation-delay: 0.8s;
+}
+@keyframes softFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+#kawaiiMessage,
+#yupiMessage,
+#tristeMessage {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#kawaiiMessage {
+    max-width: 650px;
+    margin-top: 30px;
+}
+#yupiMessage {
+    height: 350px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+#tristeMessage {
+    max-width: 650px;
+    margin-top: 30px;
+}
+#finalScene {
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+#finalScene button {
+    margin: 8px;
+}
+#noButton {
+    transition: left 0.4s ease, top 0.4s ease;
+}
+#dateInput {
+    margin: 15px;
+}
+#messageContinueButton {
+    display: none;
+    margin: 25px auto;
+    animation: softFloat 3s ease-in-out infinite;
+}
+#messageContinueArea {
+    text-align: center;
+}
+@media (max-width: 600px) {
+    #secondScene {
+        padding: 30px 15px;
+    }
+    #kawaiiMessage,
+    #tristeMessage {
+        max-width: 100%;
+    }
+    #kawaiiMessage p,
+    #tristeMessage p {
+        line-height: 1.5;
+    }
+}
